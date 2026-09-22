@@ -1,8 +1,9 @@
 import datetime
+import json
 
 class task:
     # Apparently, self is calling the object in python
-    def __init__(self,id,description,status):
+    def __init__(self,id,description):
         self.__id = id
         self.__description = description
         self.__status = "todo"
@@ -31,3 +32,8 @@ class task:
         return self.__createdAt
     def setUpdatedAt(self):
         self.__updatedAt = datetime.datetime.now()
+
+    #Like the toString() method in java, changes the representation of an object
+
+    def __repr__(self):
+        return '{\n\tid: %d,\n\tdescription: %s,\n\tstatus: %s,\n\tcreated at: %s,\n\tupdated at: %s\n}'%(self.__id,self.__description,self.__status,self.__createdAt,self.__updatedAt)
