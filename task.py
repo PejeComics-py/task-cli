@@ -1,5 +1,4 @@
 import datetime
-import json
 
 class task:
     # Apparently, self is calling the object in python
