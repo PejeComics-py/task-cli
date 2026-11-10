@@ -5,6 +5,7 @@ class Task:
     #Note: Need to asociate counter with the instances created with the tasks.json, once you close the program counter starts again, not really useful
     counter = 1
     def __init__(self,description):
+        self.save_file = "tasks.json"
         self.__id = Task.counter
         self.__description = description
         self.__status = "todo"
